@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.ctrip.ibu.flight</groupId>
+        <artifactId>flight-internalws</artifactId>
+        <version>1.5.13-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>flight-internalws-repository</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ctrip.ibu.flight</groupId>
+            <artifactId>flight-internalws-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ctrip.ibu</groupId>
+            <artifactId>ibu-soa-foundation</artifactId>
+        </dependency>
+
+        <!--MyBatis-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--              EmailServiceClient                -->
+        <!--================================================-->
+        <dependency>
+            <groupId>com.ctrip.basebiz</groupId>
+            <artifactId>EmailServiceClient</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--                  MapStruct                     -->
+        <!--================================================-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-jdk8</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--              Afterbooking-Client               -->
+        <!--================================================-->
+        <dependency>
+            <groupId>com.ctrip.ibu</groupId>
+            <artifactId>ibu-flightservice-afterbooking-client</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

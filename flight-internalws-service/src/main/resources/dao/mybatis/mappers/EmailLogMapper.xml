@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ctrip.ibu.flight.internalws.repository.dao.ibuflightdb.IEmailLogMapper">
+    <insert id="insert" parameterType="com.ctrip.ibu.flight.internalws.models.repository.dao.ibuflightdb.EmailLogDO" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO emaillog(orderid,uid,template,lan,request,subject,recipient,sendresult,actualresult,emailid,retrytimes,sendmsg,emailcategory)
+         VALUES
+          (#{emailLog.orderId},#{emailLog.uid},#{emailLog.template},#{emailLog.lan},#{emailLog.request},#{emailLog.subject},#{emailLog.recipient},#{emailLog.sendResult},
+          #{emailLog.actualResult},#{emailLog.emailId},#{emailLog.retryTimes},#{emailLog.sendMsg},#{emailLog.emailCategory})
+    </insert>
+</mapper>

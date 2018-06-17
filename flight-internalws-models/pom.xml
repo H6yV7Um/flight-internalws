@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.ctrip.ibu.flight</groupId>
+        <artifactId>flight-internalws</artifactId>
+        <version>1.5.13-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>flight-internalws-models</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.ctrip.ibu.flight</groupId>
+            <artifactId>flight-internalws-contract</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--                   Dal Client                   -->
+        <!--================================================-->
+        <!--使用Dal Dao时配置这个节点-->
+        <dependency>
+            <groupId>com.ctrip.platform</groupId>
+            <artifactId>ctrip-dal-client</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--                    Mybatis                     -->
+        <!--================================================-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--              ibucommonservice                  -->
+        <!--================================================-->
+        <dependency>
+            <groupId>com.ctrip.ibu.flight</groupId>
+            <artifactId>flight-commonservice-soaadapter</artifactId>
+        </dependency>
+
+        <!--aspectj编译器仅需要这个依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--aspectj编译器-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>aspectj-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

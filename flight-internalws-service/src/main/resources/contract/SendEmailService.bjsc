@@ -1,0 +1,125 @@
+include 'BaijiCommonTypes.bjsc'
+include 'CommonTypes.bjsc'
+include 'RequestHeader.bjsc'
+include 'ResponseHeader.bjsc'
+namespace java 'com.ctrip.ibu.flight.internalws.servicegen.contract.sendemailservice'
+
+/**
+* 邮件发送请求
+*/
+class SendEmailRequestType{
+
+    /**
+    * 请求头
+    */
+    RequestHeader.RequestHeader requestHeader;
+
+    /**
+    * 订单号(必填)
+    */
+    long orderID;
+
+    /**
+    * UID(非必填)
+    */
+    string uid;
+
+    /**
+    * 邮件模板类型(必填)
+    */
+    CommonTypes.EmailTemplateType emailTemplateType;
+
+    /**
+    * 邮件发送语言类型(非必填,不填时使用下单时站点语言)
+    */
+    CommonTypes.LanguageType languageType;
+
+    /**
+    * 是否自定义邮件内容
+    */
+    bool isCustomContent;
+
+    /**
+    * 邮件主题
+    */
+    string subject;
+
+    /**
+    * 邮件主体
+    */
+    string bodyContent;
+
+    /**
+    * 邮件主体是否是HTML格式
+    */
+    bool isBodyHtml;
+
+    /**
+    * 其他相关ID键值对
+    */
+    map<string,string> additionalIds;
+
+    /**
+    * 操作人
+    */
+    string operator;
+
+    /**
+    * 收件人列表(必填)
+    */
+    list<string> recipientEmailList;
+
+    /**
+    * 抄送收件人列表
+    */
+    list<string> cc;
+
+    /**
+    * 密送收件人列表
+    */
+    list<string> bcc;
+
+    /**
+    * 备注
+    */
+    string remark;
+}
+
+/**
+* 邮件发送响应
+*/
+class SendEmailResponseType{
+
+    /**
+    * 接口响应状态
+    */
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+
+    /**
+    * 响应头
+    */
+    ResponseHeader.ResponseHeader responseHeader;
+
+    /**
+    * 发送结果，0：成功，1：失败
+    */
+    int sendResult;
+    
+    //实际结果
+    string actualResult;
+
+    /**
+    * 发送结果描述
+    */
+    string resultMessage;
+
+    /**
+    * EmailID列表
+    */
+    list<string> emailIdList;
+
+    /**
+    * 邮件查看URL
+    */
+    list<string> emailViewUrl;
+}

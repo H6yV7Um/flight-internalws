@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.ctrip.ibu.flight</groupId>
+        <artifactId>flight-internalws</artifactId>
+        <version>1.5.13-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>flight-internalws-business</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!--Project依赖 Repository层-->
+        <dependency>
+            <groupId>com.ctrip.ibu.flight</groupId>
+            <artifactId>flight-internalws-repository</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--                 javax.inject                   -->
+        <!--================================================-->
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.Inject</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.dianping.cat</groupId>
+            <artifactId>cat-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ctrip.framework.clogging</groupId>
+            <artifactId>clogging-agent</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ctrip.hermes</groupId>
+            <artifactId>hermes-producer</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ctrip.hermes</groupId>
+            <artifactId>hermes-consumer</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>qunar.tc</groupId>
+            <artifactId>qmq-client</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>qunar.tc</groupId>
+            <artifactId>qmq-dal</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--================================================-->
+        <!--                   ibu-cargo                    -->
+        <!--================================================-->
+        <dependency>
+            <groupId>com.ctrip.ibu.platform</groupId>
+            <artifactId>ibu-cargo-configuration</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--                  MapStruct                     -->
+        <!--================================================-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-jdk8</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+    </dependencies>
+</project>

@@ -1,0 +1,5 @@
+#Client Module说明
+
+该模块主要用于生成调用Service的Client端代码,调用方可以通过jar包调用
+
+不要忘记维护该Module的版本号

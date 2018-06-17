@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.ctrip.ibu.flight</groupId>
+        <artifactId>flight-internalws</artifactId>
+        <version>1.5.13-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>flight-internalws-common</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.ctrip.ibu.flight</groupId>
+            <artifactId>flight-internalws-models</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>qunar.tc.qconfig</groupId>
+            <artifactId>qconfig-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>qunar.common</groupId>
+            <artifactId>common-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dianping.cat</groupId>
+            <artifactId>cat-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ctrip.framework.clogging</groupId>
+            <artifactId>clogging-agent</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--                  freemarker                    -->
+        <!--================================================-->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--                 javax.inject                   -->
+        <!--================================================-->
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.Inject</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--                   ibu-cargo                    -->
+        <!--================================================-->
+        <dependency>
+            <groupId>com.ctrip.ibu.platform</groupId>
+            <artifactId>ibu-cargo-configuration</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--             ibuframeworkfoundation             -->
+        <!--================================================-->
+        <dependency>
+            <groupId>com.ctrip.ibu.platform</groupId>
+            <artifactId>ibu-shark-sdk</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itext-asian</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.xhtmlrenderer</groupId>
+            <artifactId>flying-saucer-pdf-itext5</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--              携程敏感信息操作客户端               -->
+        <!--================================================-->
+        <dependency>
+            <groupId>com.ctrip.arch</groupId>
+            <artifactId>coreinfo-service-client</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--           携程敏感信息操作客户端（GDPR）           -->
+        <!--================================================-->
+        <dependency>
+            <groupId>com.ctrip.ibu.platform</groupId>
+            <artifactId>ibu-gdpr-sdk</artifactId>
+        </dependency>
+
+        <!--================================================-->
+        <!--              Apache Commons Lang               -->
+        <!--================================================-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
+</project>

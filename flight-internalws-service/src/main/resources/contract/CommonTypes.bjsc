@@ -1,0 +1,366 @@
+namespace java 'com.ctrip.ibu.flight.internalws.servicegen.contract.commontypes'
+
+/**
+* 调用方渠道
+*/
+enum ClientSource{
+    /**
+    * 未知
+    */
+    UNKNOWN,
+
+    /**
+    * Online
+    */
+    ONLINE,
+
+    /**
+    * 安卓端
+    */
+    ANDROID,
+
+    /**
+    * IOS端
+    */
+    IOS,
+
+    /**
+    * WAP端
+    */
+    WAP
+}
+
+/**
+* 语言类型
+*/
+enum LanguageType{
+
+    /**
+    * 不指定语言
+    */
+    unspecified;
+
+    /**
+    * 美国英文
+    */
+    en_US;
+    
+    /**
+    * 香港英文
+    */
+    en_HK;
+
+    /**
+    * 中文香港
+    */
+    zh_HK;
+
+    /**
+    * 中文台湾
+    */
+    zh_TW,
+
+    /**
+    * 简体中文
+    */
+    zh_CN;
+
+    /**
+    * 日文
+    */
+    ja_JP;
+
+    /**
+    * 韩文
+    */
+    ko_KR;
+
+    /**
+    * 法文
+    */
+    fr_FR;
+
+    /**
+    * 新加坡英文
+    */
+    en_SG;
+    
+    /**
+    * 德文
+    */
+    de_DE;
+
+    /**
+    * 俄语
+    */
+    ru_RU;
+
+    /**
+    * 西班牙语
+    */
+    es_ES;
+
+    /**
+    * 马来语
+    */
+    ms_MY;
+
+    /**
+    * 泰语
+    */
+    th_TH;
+
+    /**
+    * 印尼语
+    */
+    id_ID,
+    
+    /**
+    * 澳大利亚英文
+    */
+    en_AU,
+
+    /**
+    * 越南文
+    */
+    vi_VN,
+
+    /**
+    * 菲律宾语
+    */
+    tl_PH,
+
+    //意大利语
+    it_IT
+}
+
+/**
+* 邮件模板类型
+*/
+enum EmailTemplateType{
+    /**
+    * 不指定模板类型
+    */
+    unspecified;
+    
+    /**
+    * 确认邮件(出票邮件)
+    */
+    ReservationConfirmation,
+
+    /**
+    * 支付成功邮件
+    */
+    PaymentSuccess;
+    
+    /**
+    * 支付失败邮件
+    */
+    PaymentFailed;
+    
+    /**
+    * 支付取消邮件
+    */
+    PaymentCanceled;
+    
+    /**
+    * 航变(航变通知)
+    */
+    FlightChangeNotify;
+    
+    /**
+    * 航变(航班取消)
+    */
+    FlightChangeCanceled;
+    
+    /**
+    * 航变(需确认航变)
+    */
+    FlightChangeFeedback;
+    
+    /**
+    * 改签成功邮件
+    */
+    NewFlightSuccess;
+    
+    /**
+    * 改签支付成功邮件
+    */
+    NewFlightPaymentSuccess;
+    
+    /**
+    * 改签取消邮件
+    */
+    NewFlightCanceled;
+    
+    /**
+    * 改签待支付
+    */
+    NewFlightTobePaid;
+
+    /**
+    * 改签咨询已核实
+    */
+    NewFlightConsultingVerified;
+
+    /**
+    * 出保邮件
+    */
+    InsuranceIssued;
+    
+    /**
+    * 退保邮件
+    */
+    InsuranceRefunded;
+    
+    /**
+    * 改保邮件
+    */
+    InsuranceChanged;
+
+    /**
+    * X产品待支付
+    */
+    XProductSubmitted;
+
+    /**
+    * X产品支付成功
+    */
+    XProductPaymentSuccess;
+
+    /**
+    * X产品购买成功
+    */
+    XProductIssued;
+
+    /**
+    * X产品购买失败
+    */
+    XProductCanceled;
+
+    /**
+    * 退票费用已核实
+    */
+    RefundFeeVerified;
+
+    /**
+    * 退票成功
+    */
+    RefundSuccess,
+
+    /**
+    * 电子收据(报销凭证)
+    */
+    EReceipt,
+
+    /**
+    * 行程明细
+    */
+    ItineraryDetail
+}
+
+/**
+* 邮件实体
+*/
+class Email{
+
+    /**
+    * 邮件ID
+    */
+    string emailId;
+
+    /**
+    * 邮件发送方邮箱
+    */
+    string sender;
+
+    /**
+    * 邮件发送方名
+    */
+    string senderName;
+
+    /**
+    * 用户Id
+    */
+    string uid;
+
+    /**
+    * 操作人
+    */
+    string eid;
+
+    /**
+    * 收件人邮箱
+    */
+    list<string> recipient;
+
+    /**
+    * 邮件抄送列表
+    */
+    list<string> cc;
+
+    /**
+    * 邮件密送列表
+    */
+    list<string> bcc;
+
+    /**
+    * 收件人名称
+    */
+    string recipientName;
+
+    /**
+    * 邮件主题
+    */
+    string subject;
+
+    /**
+    * 邮件模板Id
+    */
+    int bodyTemplateId;
+
+    /**
+    * 邮件主体内容
+    */
+    string bodyContent;
+
+    /**
+    * 邮件发送请求创建时间
+    */
+    datetime createTime;
+
+    /**
+    * 邮件计划发送时间
+    */
+    datetime scheduleTime;
+
+    /**
+    * 邮件实际发送时间
+    */
+    datetime sendTime;
+
+    /**
+    * 邮件发送过期时间
+    */
+    datetime expiredTime;
+
+    /**
+    * 发件服务器
+    */
+    string sendHost;
+
+    /**
+    * EmstpId
+    */
+    string emstpId;
+
+    /**
+    * 邮件发送错误信息
+    */
+    string errorMsg;
+
+    /**
+    * 邮件发送状态(0:成功，其他:失败)
+    */
+    int emailStatus;
+}

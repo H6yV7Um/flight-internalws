@@ -1,0 +1,48 @@
+package com.ctrip.ibu.flight.internalws.models.common;
+
+/**
+ * 市场
+ */
+public enum Market {
+    AllOthers,
+    AE,
+    AT,
+    AU,
+    BR,
+    CA,
+    CH,
+    CN,
+    CO,
+    CZ,
+    DE,
+    ES,
+    FR,
+    GR,
+    HK,
+    ID,
+    IE,
+    IL,
+    IN,
+    IT,
+    JP,
+    KR,
+    MO,
+    MX,
+    MY,
+    NL,
+    NZ,
+    PH,
+    PL,
+    PT,
+    RU,
+    SA,
+    SE,
+    SG,
+    TH,
+    TR,
+    TW,
+    UK,
+    GB,
+    US,
+    VN
+}

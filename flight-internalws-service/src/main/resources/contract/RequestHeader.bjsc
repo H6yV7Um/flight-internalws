@@ -1,0 +1,28 @@
+namespace java 'com.ctrip.ibu.flight.internalws.servicegen.contract.requestheader'
+include 'CommonTypes.bjsc'
+
+/**
+* 请求头
+*/
+class RequestHeader{
+
+    /**
+    * 应用ID
+    */
+    string appId;
+
+    /**
+    * 客户端Ip
+    */
+    string clientIp;
+
+    /**
+    * 客户端来源
+    */
+    CommonTypes.ClientSource clientType;
+
+    /**
+    *
+    */
+    string clientSource;
+}

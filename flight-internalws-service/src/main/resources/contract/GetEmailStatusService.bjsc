@@ -1,0 +1,57 @@
+include 'BaijiCommonTypes.bjsc'
+include 'CommonTypes.bjsc'
+include 'RequestHeader.bjsc'
+include 'ResponseHeader.bjsc'
+namespace java 'com.ctrip.ibu.flight.internalws.servicegen.contract.getemailstatusservice'
+
+/**
+* 获取邮件发送状态请求
+*/
+class GetEmailStatusRequestType{
+
+    /**
+    * 请求头
+    */
+    RequestHeader.RequestHeader requestHeader;
+
+    /**
+    * 需要查询的EmailId列表
+    */
+    list<string> emailIdList;
+
+    /**
+    * 邮件发送通道ID
+    */
+    string sendCode;
+}
+
+/**
+* 获取邮件发送状态响应
+*/
+class GetEmailStatusResponseType{
+
+    /**
+    * 接口响应状态
+    */
+    BaijiCommonTypes.ResponseStatusType responseStatus;
+
+    /**
+    * 响应头
+    */
+    ResponseHeader.ResponseHeader responseHeader;
+
+    /**
+    * 获取结果Code
+    */
+    int resultCode;
+
+    /**
+    * 结果描述
+    */
+    string resultMsg;
+
+    /**
+    * 获取到的邮件
+    */
+    list<CommonTypes.Email> emailList;
+}

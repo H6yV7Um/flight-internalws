@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:soa="http://www.ctrip.com/schema/soa"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:qconfig="http://www.qunar.com/schema/qconfig"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.ctrip.com/schema/soa
+        http://www.ctrip.com/schema/soa.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+        http://www.qunar.com/schema/qconfig
+        http://www.qunar.com/schema/qconfig.xsd">
+
+    <!--注解扫描地址-->
+    <context:component-scan base-package="com.ctrip.ibu.flight.internalws.service,
+        com.ctrip.ibu.flight.internalws.business,
+        com.ctrip.ibu.flight.internalws.repository,
+        com.ctrip.ibu.flight.internalws.common">
+    </context:component-scan>
+
+    <!--启用SOA注解-->
+    <soa:auto-config/>
+
+    <!--启动AOP注解，且强制使用Cglib动态代理-->
+    <!--<aop:config proxy-target-class="true"/>&ndash;&gt;-->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
+    <!--QConfig 注解功能，热加载-->
+    <qconfig:annotation-driven />
+
+</beans>

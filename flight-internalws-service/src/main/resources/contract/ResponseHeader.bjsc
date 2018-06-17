@@ -1,0 +1,17 @@
+namespace java 'com.ctrip.ibu.flight.internalws.servicegen.contract.responseheader'
+
+/**
+* 请求头
+*/
+class ResponseHeader{
+
+    /**
+    * 调用结果
+    */
+    int resultCode;
+
+    /**
+    * 错误信息
+    */
+    string errorMsg;
+}

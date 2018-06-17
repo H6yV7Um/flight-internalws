@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+  <metadata>
+    <name>Flight-InternalwsService</name>
+    <namespace>http://soa.ctrip.com/framework/soa/flight-internalwsservice/v1</namespace>
+  </metadata>
+</service>
